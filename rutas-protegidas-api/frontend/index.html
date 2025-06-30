@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente JWT - Rutas Protegidas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Sistema de Autenticación JWT</h1>
+        
+        <!-- Sección de Login -->
+        <div id="login-section" class="section">
+            <h2>Iniciar Sesión</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Usuario:</label>
+                    <input type="text" id="username" name="username" required>
+                    <small>Prueba: abraham o maria</small>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                    <small>Prueba: 123456 (abraham) o password123 (maria)</small>
+                </div>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </div>
+
+        <!-- Sección de Perfil (inicialmente oculta) -->
+        <div id="perfil-section" class="section hidden">
+            <h2>👤 Tu Perfil</h2>
+            <div id="perfil-info">
+                <!-- Aquí se mostrará la información del usuario -->
+            </div>
+            <button id="logout-btn" class="secondary">Cerrar Sesión</button>
+            <button id="refresh-perfil-btn">Actualizar Perfil</button>
+        </div>
+
+        <!-- Sección de Estado -->
+        <div id="status-section" class="section">
+            <h3>Estado de la sesión:</h3>
+            <div id="status-info">No autenticado</div>
+        </div>
+
+        <!-- Mensajes -->
+        <div id="messages"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
