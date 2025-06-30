@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - JWT Auth</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <h1>Dashboard</h1>
+            <div class="user-info">
+                <span id="userName">Cargando...</span>
+                <button id="logoutBtn" class="logout-btn">Cerrar Sesión</button>
+            </div>
+        </header>
+        
+        <main class="dashboard-content">
+            <div class="welcome-card">
+                <h2>¡Bienvenido!</h2>
+                <p>Has iniciado sesión exitosamente.</p>
+                <div id="userDetails" class="user-details">
+                    <!-- Los datos se cargarán aquí -->
+                </div>
+            </div>
+            
+            <div class="actions-card">
+                <h3>Acciones Disponibles</h3>
+                <button id="getUserBtn" class="action-btn">Obtener Datos del Usuario</button>
+                <button id="testApiBtn" class="action-btn">Probar API Protegida</button>
+                <div id="apiResponse" class="api-response"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
